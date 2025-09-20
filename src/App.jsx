@@ -1,32 +1,41 @@
 import React from 'react';
-import MovieCard from './component/MovieCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-const App = () => {
-  const movies = [
-    { title: 'Inception', rating: 8.8, description: 'A mind-bending thriller about dreams within dreams.' },
-    { title: 'Titanic', rating: 7.5, description: 'A tragic love story set on the ill-fated Titanic.' },
-    { title: 'Some Bad Movie', rating: 4.3, description: 'A poorly received movie that failed to impress critics.' },
-    { title: 'The Godfather', rating: 9.2, description: 'An epic crime saga of the Corleone family.' },
-    { title: 'Jurassic Park', rating: 6.9, description: 'Dinosaurs brought back to life create chaos in a theme park.' }
-  ];
-
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import Carousel from "./component/Carousel";
+import Toggle from "./component/Toggle";
+import Home from "./component/pages/Home";
+import About from "./component/pages/About";
+import Contact from "./component/pages/Contact";
+import Movie from "./component/Movie";
+import NotFound from "./component/NotFound";
+import ShowHideText from './component/ShowHideText';
+import MovieCard from './component/MovieCard';
+import Message from './component/Message';
+import PasswordValidator from './component/PasswordValidator';
+import Text from './component/Text';
+function App() {
   return (
     <>
+      <Navbar />
+      <Carousel />
+      <Toggle />
+      {/* Movie Collection Section */}
       <div className="container my-5">
         <h1 className="text-center mb-4">🎬 Movie Collection</h1>
+        <ShowHideText />
         <div className="row g-4">
-          {movies.map((movie, index) => (
-            <div className="col-md-4" key={index}>
-              <MovieCard 
-                title={movie.title} 
-                rating={movie.rating} 
-                description={movie.description} 
-              />
-            </div>
-          ))}
+          <MovieCard />
         </div>
       </div>
+      {/* Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/movie" element={<Movie />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
   );
 };
