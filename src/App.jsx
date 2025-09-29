@@ -10,6 +10,9 @@ import PostList from "./component/PostList";
 import PostDetails from "./component/PostDetails";
 import CreatePost from "./component/CreatePost";
 import MovieCard from "./component/MovieCard";
+import VideoCard from "./component/VideoCard";
+import UserForm from "./component/forms/UserForm";
+import Toggle from "./component/Toggle";
 
 function App() {
   return (
@@ -22,7 +25,7 @@ function App() {
       <MovieCard/>
       <VideoCard/>
       <UserForm/>
-      
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about-us" element={<About />}></Route>
