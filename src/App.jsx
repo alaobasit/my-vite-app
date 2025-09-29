@@ -9,12 +9,20 @@ import Carousel from "./component/Carousel";
 import PostList from "./component/PostList";
 import PostDetails from "./component/PostDetails";
 import CreatePost from "./component/CreatePost";
+import MovieCard from "./component/MovieCard";
 
 function App() {
   return (
     <>
       <Navbar />
       <Carousel />
+      <CreatePost/>
+      <Toggle/>
+      <Movie/>
+      <MovieCard/>
+      <VideoCard/>
+      <UserForm/>
+      
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about-us" element={<About />}></Route>
