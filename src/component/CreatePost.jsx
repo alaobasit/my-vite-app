@@ -81,17 +81,17 @@ const CreatePost = () => {
         {isContentTouched && postContent.length > 200 && <div className="text-danger">Maximum 200 characters.</div>}
       </div>
 
-      {/* Submit */}
-      <button type="submit" className="btn btn-primary" disabled={!isFormValid}>
-        Create
-      </button>
+      {/* Submit & Feedback */}
+      <div className="mt-3">
+        <button type="submit" className="btn btn-primary" disabled={!isFormValid}>
+          Create
+        </button>
 
-      {/* Feedback */}
-      {isPostCreated && <div className="text-success mt-3">Post Created Successfully!</div>}
-      {errorMessage && <div className="text-danger mt-3">{errorMessage}</div>}
+        {isPostCreated && <div className="text-success mt-3">Post Created Successfully!</div>}
+        {errorMessage && <div className="text-danger mt-3">{errorMessage}</div>}
+      </div>
     </form>
   );
 };
 
 export default CreatePost;
-

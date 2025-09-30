@@ -17,15 +17,9 @@ import Toggle from "./component/Toggle";
 function App() {
   return (
     <>
-      <Navbar />
-      <Carousel />
+    
       <CreatePost/>
-      <Toggle/>
-      <Movie/>
-      <MovieCard/>
-      <VideoCard/>
-      <UserForm/>
-
+    
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about-us" element={<About />}></Route>
