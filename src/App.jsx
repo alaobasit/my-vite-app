@@ -17,6 +17,18 @@ import Toggle from "./component/Toggle";
 function App() {
   return (
     <>
+    
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about-us" element={<About />}></Route>
+        <Route path="/contact-us" element={<Contact />}></Route>
+        <Route path="/movie" element={<Movie />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+        <Route path="/post-list" element={<PostList />}></Route>
+        <Route path="/posts/:postId" element={<PostDetails />}></Route>
+        <Route path="/create" element={<CreatePost />}></Route>
+      </Routes>
+      
       <Navbar />
       <Carousel />
       <CreatePost/>
@@ -29,16 +41,6 @@ function App() {
       <PostDetails/>
       <PostList />
     
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about-us" element={<About />}></Route>
-        <Route path="/contact-us" element={<Contact />}></Route>
-        <Route path="/movie" element={<Movie />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-        <Route path="/post-list" element={<PostList />}></Route>
-        <Route path="/posts/:postId" element={<PostDetails />}></Route>
-        <Route path="/create" element={<CreatePost />}></Route>
-      </Routes>
     </>
   );
 }
