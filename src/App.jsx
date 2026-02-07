@@ -13,6 +13,10 @@ import MovieCard from "./component/MovieCard";
 import VideoCard from "./component/VideoCard";
 import UserForm from "./component/forms/UserForm";
 import Toggle from "./component/Toggle";
+import PasswordValidator from "./component/forms/PasswordValidator";
+import Counter from "./component/Counter";
+import ScrollSection from "./component/ScrollSection";
+import ShowHideText from "./component/ShowHideText";
 
 function App() {
   return (
@@ -28,7 +32,7 @@ function App() {
         <Route path="/posts/:postId" element={<PostDetails />}></Route>
         <Route path="/create" element={<CreatePost />}></Route>
       </Routes>
-      
+
       <Navbar />
       <Carousel />
       <CreatePost/>
@@ -40,6 +44,10 @@ function App() {
       <Movie />
       <PostDetails/>
       <PostList />
+      <PasswordValidator />
+      <Counter />
+      <ScrollSection />
+      <ShowHideText />
     
     </>
   );
