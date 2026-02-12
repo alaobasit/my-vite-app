@@ -4,6 +4,8 @@ import Home from "./component/pages/Home";
 import About from "./component/pages/About";
 import Contact from "./component/pages/Contact";
 import Navbar from "./component/Navbar";
+import Message from "./component/Message";
+import FetchUsers from "./component/FetchUsers";
 import NotFound from "./component/NotFound";
 import Carousel from "./component/Carousel";
 import PostList from "./component/PostList";
@@ -33,21 +35,19 @@ function App() {
         <Route path="/create" element={<CreatePost />}></Route>
       </Routes>
 
-      <Navbar />
-      <Carousel />
-      <CreatePost/>
-      <MovieCard />
-      <VideoCard />
-      <UserForm />
-      <Toggle />
-      <NotFound />
-      <Movie />
-      <PostDetails/>
-      <PostList />
-      <PasswordValidator />
-      <Counter />
-      <ScrollSection />
-      <ShowHideText />
+    < Navbar />
+    < Message />
+    < FetchUsers />
+    < Carousel />
+    < MovieCard />
+    < VideoCard />
+    < UserForm />
+    < Toggle />
+    < PasswordValidator />
+    < Counter />
+    < ScrollSection />
+    < ShowHideText />
+    <NotFound />
     
     </>
   );
